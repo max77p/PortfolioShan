@@ -297,13 +297,42 @@ align-items:center;
     justify-content: center;
     align-items: center;
     padding:.1em;
+    position:relative;
 }
 
-.grid-item:hover,.grid-item .iconStyle:hover{
+/* .grid-item:hover,.grid-item .iconStyle:hover{
     cursor: pointer;
     background-color:white;
     opacity:.5;
     transition: all 0.5s ease-in-out;
     -webkit-transition: all 250ms cubic-bezier(1, -0.6, 0.57, -0.15) 0s;
     transition: all 250ms cubic-bezier(1, -0.6, 0.57, -0.15) 0s;
+} */
+.overlay{
+position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
 }
+
+.iconStyle:hover .overlay {
+    cursor: pointer;
+    opacity: 1;
+  }
+
+  .info {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
