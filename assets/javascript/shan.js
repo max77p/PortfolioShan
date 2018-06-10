@@ -1,18 +1,6 @@
 
-// $(document).ready(function () {
-//     var typedOptions = {
-//         strings: ["Shan.", "Front-End.", "Back-End.", "Creative."],
-//         typeSpeed: 100,
-//         backSpeed: 50,
-//         loop: true
-//     }
-//     var typed = new Typed(".typed", typedOptions);
-
-// });
-
-
-
-setTimeout(function () {
+//show typed js when window is loaded
+$(document).ready(function () {
     var typedOptions = {
         strings: ["Shan.", "Front-End.", "Back-End.", "Creative."],
         typeSpeed: 100,
@@ -22,3 +10,65 @@ setTimeout(function () {
     var typed = new Typed(".typed", typedOptions);
 
 }, 1000);
+
+$('.owl-carousel').owlCarousel({
+    // center:true,
+    loop: true,
+    margin: 10,
+    nav: true,
+    dots: false,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 2
+        },
+        1000: {
+            items: 3,
+        }
+    }
+})
+
+
+//-----------------Scroll to Top------------------
+$(window).scroll(function () {
+    if ($(this).scrollTop() >= 100) {        // If page is scrolled more than 100px
+        $('#return-to-top').fadeIn(200);    // Fade in the arrow
+    } else {
+        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+    }
+});
+$('#return-to-top').click(function () {      // When arrow is clicked
+    $('body,html').animate({
+        scrollTop: 0                       // Scroll to top of body
+    }, 500);
+});
+
+//-----------------isotope settings--------------
+$('.grid').isotope({
+    // options
+    itemSelector: '.grid-item',
+    // percentPosition: true,
+    layoutMode: 'masonry'
+});
+
+// filter items on button click
+$('.filter-button-group').on('click', 'a', function (e) {
+    $('#portfolioPages a').removeClass("active");
+    $(this).addClass("active")
+
+    e.preventDefault();
+    var filterValue = $(this).attr('data-filter');
+    $('.grid').isotope({
+        filter: filterValue,
+        transitionDuration: '1s'
+    });
+});
+
+// Portfolio hover effect init
+$('#da-thumbs> li').each( function() { $(this).hoverdir(); } );
