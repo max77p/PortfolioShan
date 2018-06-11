@@ -290,6 +290,8 @@ align-items:center;
 .grid-item { width: 33.33%;}
 .grid-item--width2 { width: 33.333%;}
 
+
+
 .iconStyle{
     height:17em;
     /* border:1px solid black; */
@@ -344,6 +346,9 @@ position: absolute;
   }
   .profile_image{
   }
+  .grid-item--width2{
+    width:50%;
+  }
 }
 
 @media (max-width: 520px){
@@ -361,4 +366,10 @@ position: absolute;
     .profile_image{
       margin:0;
     }
+
+    .grid-item--width2{
+        width:100%;
+      }
   }
+
+  
