@@ -42,6 +42,12 @@ $(window).scroll(function () {
     } else {
         $('#return-to-top').fadeOut(200);   // Else fade out the arrow
     }
+    if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+       $('.locationNav').css("color","white");
+    }
+    else{
+        $('.locationNav').css("color","black");
+    }
 });
 $('#return-to-top').click(function () {      // When arrow is clicked
     $('body,html').animate({
@@ -63,7 +69,7 @@ $('.grid').isotope({
 // filter items on button click
 $('.filter-button-group').on('click', 'a', function (e) {
     $('#portfolioPages a').removeClass("active");
-    $(this).addClass("active")
+    $(this).addClass("active");
 
     e.preventDefault();
     var filterValue = $(this).attr('data-filter');
@@ -73,15 +79,11 @@ $('.filter-button-group').on('click', 'a', function (e) {
     });
 });
 
-// Portfolio hover effect init
-// $('#da-thumbs> li').each( function() { $(this).hoverdir(); } );
+$('.nav-item').on('click','a',function(e){
+    $('.nav-item a').removeClass("active");
+    $(this).addClass("active");
 
-// $(function() {
-//     $('.chart').easyPieChart({
-//         //your options goes here
-//     });
-// });
-
+});
 // progressbar.js@1.0.0 version is used
 // Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
 var skills = ["HTML", "CSS", "JavaScript", "JQuery", "MongoDB", "React.js", "Express.js", "Node.js", "Firebase"];

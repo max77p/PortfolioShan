@@ -31,6 +31,10 @@ justify-content: space-between;
 #navbarNav{
     flex-grow:unset;
 }
+
+.nav-item a.active{
+font-weight:bold;
+}
 .hireBtn{
 background-color: #111;
     border-radius: 30px;
@@ -40,12 +44,17 @@ background-color: #111;
     line-height: 45px;
     display: inline-block;
     padding: 0 25px;
+    border-color:black;
 }
 
-.hireBtn:focus, .hireBtn:hover {
+.hireBtn:focus, .hireBtn:hover, .hreBtn:active {
     color: #fff;
      border-radius: 0;
      transition: all 0.5s;
+     background-color:#4a9699 !important;
+     outline:none !important;
+     box-shadow: none;
+     border:0;
 }
 
 .profileSection {
@@ -135,6 +144,9 @@ background-color: #111;
 }
 #portfolioTitle,#skillTitle{
     text-align:center;
+}
+#portfolioTitle{
+    /* text-align:left; */
 }
 #portfolioPages{
 text-align: center;
@@ -243,11 +255,8 @@ align-items:center;
     background-color:#000000;
     padding:30px 0px;
 }
-.leftFooterSection{
-    float:left;
-}
-.rightFooterSection{
-    float:right;
+.footer_Container h5{
+    text-align:center;
 }
 
 #return-to-top {
@@ -413,3 +422,20 @@ position: absolute;
       height:100%;
       /* color:#b3b5bb; */
   }
+
+  .inner_contact_container{
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .inner_contact_container .send_Message{
+      margin-top:1.5em;
+  }
+.inner_contact_container .email{
+    padding-top: 2em;
+}
+.main_contact_container{
+    text-align: center;
+}

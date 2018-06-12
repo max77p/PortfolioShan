@@ -64,7 +64,7 @@
     <!--fixed navbar header-->
     <header id="header" class="header_section">
         <a href="" id="return-to-top">
-            <i class="fas fa-chevron-circle-up"></i>
+            <i class="fas fa-chevron-circle-up locationNav"></i>
         </a>
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light bg-light navHeader" id="navbar">
@@ -77,16 +77,19 @@
 
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home
-                                <span class="sr-only">(current)</span>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#profileHome">Home
+                                <!-- <span class="sr-only">(current)</span> -->
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Portfolio</a>
+                            <a class="nav-link" href="#skillsHome">Skills</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+                            <a class="nav-link" href="#portfolioHome">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#workTogetherHome">Contact</a>
                         </li>
                         <li class="nav-item">
                             <!-- <a class="nav-link disabled hireBtn" href="#">Hire me now</a> -->
@@ -174,11 +177,8 @@
                     <!-- <p>Connect Client information</p> -->
                 </div>
             </div>
-
-
         </div>
         <!-- <div class="chart" data-percent="73" data-scale-color="#ffb400">73%</div> -->
-
     </section>
 
     <!--Skills showcase section-->
@@ -226,7 +226,7 @@
             </div>
     </section>
 
-    <!--secion portfolio-->
+    <!--Portfolio Section-->
     <section id="portfolioHome" class="portfolioSection">
         <div class="container">
             <div id="portfolioTitle">
@@ -302,14 +302,31 @@
 
     <!--lets work together section-->
     <section id="workTogetherHome" class="workTogetherSection">
-        <div class="container">
-            <div id="portfolioTitle">
-                <h2>Let's Work Together</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five
-                    centuries
-                </p>
-                <!-- <a class="nav-link disabled hireBtn" href="#">Send a Message</a> -->
-                <button type="button" class="btn btn-primary hireBtn" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">SEND A MESSAGE</button>
+        <div class="container main_contact_container">
+                
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="portfolioTitle">
+                            <h2 id="work_together_title">Let's Work Together</h2>
+                        <p>Full Stack Developer with accounting background. Recently completed a full stack web development
+                            bootcamp at Univeristy of Toronto.
+                            Enjoys leveraging 10 years background in accounting and commercial real estate to provide unique
+                            perspectives on how end-users interact with websites and software platforms. Passionate about
+                            approaching programming challenges from different angles, and collaborating with others to create
+                            meaningful web applications.
+                        </p>
+                        <!-- <a class="nav-link disabled hireBtn" href="#">Send a Message</a> -->
+                    </div>
+                </div>
+                <div class="col-md-6 inner_contact_container">
+                    <h5 class="email">
+                        <i class="fas fa-envelope"></i> shanindrakumar@gmail.com</h5>
+                    <h5 class="location">
+                        <i class="fas fa-map-marker-alt"></i> Toronto, Ontario</h5>
+                    <h5 class="phone">
+                            <i class="fas fa-phone"></i> 647-295-5555</h5>
+                    <button type="button" class="btn btn-primary hireBtn send_Message" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">SEND A MESSAGE</button>
+                </div>
             </div>
 
         </div>
@@ -318,13 +335,10 @@
 
     <!--footer-->
     <footer class="footer footerStyle">
-        <div class="container">
-            <div class="leftFooterSection">
-                <span class="text-muted">Place sticky footer content here.</span>
-            </div>
-            <div class="rightFooterSection">
-                <span class="text-muted">Place sticky footer content here.</span>
-            </div>
+        <div class="container footer_Container">
+          
+                <h5 class="text-muted">&copy;Copyright</h5>  
+         
         </div>
     </footer>
 
