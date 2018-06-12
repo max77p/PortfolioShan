@@ -458,11 +458,9 @@ position: absolute;
   }
 
   .inner_contact_container .send_Message{
-      margin-top:1.5em;
+      margin-top:.5em;
   }
-.inner_contact_container .email{
-    padding-top: 2em;
-}
+
 .inner_contact_container a{
     color:black;
     padding:.1em;
