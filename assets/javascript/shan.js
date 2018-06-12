@@ -115,7 +115,7 @@ $('.skillCont').each(function (i) {
     // bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
     // bar.text.style.fontSize = '1rem';
     
-    bar.animate($(this).attr("value"));  // Number from 0.0 to 1.0
+    bar.animate($(this).children('h5').attr("value"));  // Number from 0.0 to 1.0
 });
 
 
