@@ -354,6 +354,32 @@ position: absolute;
     text-align: center;
   }
 
+  .info a{
+      color:black;
+      font-size:2em;
+  }
+
+  .info a:hover{
+    cursor: pointer;
+    -webkit-transform: translateY(-7px);
+    -ms-transform: translateY(-7px);
+    -o-transform: translateY(-7px);
+    transform: translateY(-7px);
+    -webkit-box-shadow: 0 7px 12px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 7px 12px rgba(0, 0, 0, 0.15);
+    -o-box-shadow: 0 7px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 7px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .portfolioLinkIcons{
+      display:flex;
+      justify-content: space-between;
+  }
+
+  .portfolioLinkIcons>#photoLink{
+      margin:0 auto;
+  }
+
   @media (max-width: 767px){
   .profile_info{
       display:flex;
@@ -436,6 +462,22 @@ position: absolute;
 .inner_contact_container .email{
     padding-top: 2em;
 }
+.inner_contact_container a{
+    color:black;
+    padding:.1em;
+}
+
+.inner_contact_container a:visited, .inner_contact_container a:hover,.inner_contact_container a i:hover{
+color:#4a9699;
+text-decoration: none;
+/* color:grey; */
+}
+
+.inner_contact_container a i{
+    font-size:1.5em;
+    color:black;
+}
+
 .main_contact_container{
     text-align: center;
 }

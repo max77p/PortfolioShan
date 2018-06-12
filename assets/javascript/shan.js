@@ -1,4 +1,3 @@
-
 //show typed js when window is loaded
 $(document).ready(function () {
     var typedOptions = {
