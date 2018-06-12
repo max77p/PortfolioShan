@@ -53,8 +53,11 @@ $('#return-to-top').click(function () {      // When arrow is clicked
 $('.grid').isotope({
     // options
     itemSelector: '.grid-item',
-    // percentPosition: true,
-    layoutMode: 'masonry'
+    percentPosition: true,
+    layoutMode: 'masonry',
+    masonry: {
+        columnWidth: '.grid-item'
+    }
 });
 
 // filter items on button click
@@ -71,4 +74,47 @@ $('.filter-button-group').on('click', 'a', function (e) {
 });
 
 // Portfolio hover effect init
-$('#da-thumbs> li').each( function() { $(this).hoverdir(); } );
+// $('#da-thumbs> li').each( function() { $(this).hoverdir(); } );
+
+// $(function() {
+//     $('.chart').easyPieChart({
+//         //your options goes here
+//     });
+// });
+
+// progressbar.js@1.0.0 version is used
+// Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
+var skills = ["HTML", "CSS", "JavaScript", "JQuery", "MongoDB", "React.js", "Express.js", "Node.js", "Firebase"];
+
+
+$('.skillCont').each(function (i) {
+
+    var bar = new ProgressBar.Line(this, {
+        strokeWidth: 1,
+        color: 'black',
+        trailColor: '#b3b5bb',
+        trailWidth: 1,
+        easing: 'easeInOut',
+        duration: 1400,
+        svgStyle: null,
+        text: {
+            value: '',
+            alignToBottom: false
+        },
+        from: { color: '#000000' },
+        to: { color: '#000000' },
+        // Set default step function for all animate calls
+        step: (state, bar) => {
+            // bar.setText($(this).attr("data-skill"));
+            bar.path.setAttribute('stroke', state.color);
+            
+            // bar.text.style.color = state.color;
+        }       
+    });
+    // bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+    // bar.text.style.fontSize = '1rem';
+    
+    bar.animate($(this).attr("value"));  // Number from 0.0 to 1.0
+});
+
+

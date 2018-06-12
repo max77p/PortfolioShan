@@ -71,7 +71,9 @@ background-color: #111;
     margin-top:-50px !important;
 }
 /*************************/
-
+.profileContent h1,.profileContent p{
+    color:white;
+}
 .profile_inner{
     display:flex;
     justify-content: center;
@@ -102,7 +104,7 @@ background-color: #111;
     box-shadow: 0px 16px 28px 0px rgba(0, 0, 0, 0.15);
 }
 
-.servicesSection,.portfolioSection,.workTogetherSection{
+.servicesSection,.portfolioSection,.workTogetherSection,.skillsSection{
     /* background-image: url("../images/profileBackground.jpg"); */
     background-color: #f7f7f7;
     background-position: center center;
@@ -114,7 +116,9 @@ background-color: #111;
     position: relative;
     /* z-index: 1; */
     box-shadow: 1px 3px 2px 3px rgba(0, 0, 0, 0.26);
-    padding:3em;
+    padding:.1em;
+    padding-top:5em;
+    padding-bottom:5em;
 }
 
 .servicesSection{
@@ -129,7 +133,7 @@ background-color: #111;
 #portfolioHome{
     background-color:white;
 }
-#portfolioTitle{
+#portfolioTitle,#skillTitle{
     text-align:center;
 }
 #portfolioPages{
@@ -139,6 +143,8 @@ padding-bottom:2em;
 
 #portfolioPages a{
     margin-right:1em;
+    color:#4a9699;
+    font-weight: bold;
 }
 
 .portfolioTable{
@@ -173,7 +179,7 @@ transition: all 0.3s ease-in-out;
     text-align: center;
 }
 
-.individ_carousal:hover {
+/* .individ_carousal:hover {
     cursor: pointer;
     -webkit-transform: translateY(-7px);
     -ms-transform: translateY(-7px);
@@ -183,7 +189,7 @@ transition: all 0.3s ease-in-out;
     -moz-box-shadow: 0 7px 12px rgba(0, 0, 0, 0.15);
     -o-box-shadow: 0 7px 12px rgba(0, 0, 0, 0.15);
     box-shadow: 0 7px 12px rgba(0, 0, 0, 0.15);
-  }
+  } */
 
 
 .owl-theme{
@@ -349,6 +355,7 @@ position: absolute;
   .grid-item--width2{
     width:50%;
   }
+  
 }
 
 @media (max-width: 520px){
@@ -370,6 +377,39 @@ position: absolute;
     .grid-item--width2{
         width:100%;
       }
+     
   }
 
-  
+  @media (max-width:1160px){
+    
+  }
+
+  .skillCont {
+    /* margin: 20px; */
+    width: 100%;
+    height: 3em;
+  }
+  .skillCont h5{
+      margin:0;
+      font-size:1em;
+  }
+
+  .flexOnRow{
+      display:flex;
+      align-items:center;
+  }
+
+  .skillsInner{
+      display:flex;
+
+  }
+  .skillsSection{
+      background-color:white;
+
+  }
+
+  #skillsHome img{
+      width:100%;
+      height:100%;
+      /* color:#b3b5bb; */
+  }

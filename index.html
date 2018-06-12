@@ -5,21 +5,14 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
-    <!--Import Google Icon Font-->
-    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
-    <!--Import materialize.css-->
-    <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" /> -->
-
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <!--font awesome cdn-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
         crossorigin="anonymous">
-
     <!--owl carousel-->
     <link rel="stylesheet" type="text/css" media="screen" href="../portfolioShan/assets/owlcarousel/assets/owl.carousel.min.css"
     />
@@ -32,7 +25,41 @@
 </head>
 
 <body>
-    <!-- Return to Top -->
+
+    <!-- Modal for when hire me button is clicked or send a message button is clicked-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Get in touch</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+
+                            <input type="text" class="form-control" id="sender-name" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+
+                            <input type="text" class="form-control" id="sender-contact" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <!-- <label for="message-text" class="col-form-label">Message:</label> -->
+                            <textarea class="form-control" id="message-text" placeholder="Message"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Send message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!--fixed navbar header-->
     <header id="header" class="header_section">
@@ -62,7 +89,8 @@
                             <a class="nav-link" href="#">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled hireBtn" href="#">Hire me now</a>
+                            <!-- <a class="nav-link disabled hireBtn" href="#">Hire me now</a> -->
+                            <button type="button" class="btn btn-primary hireBtn" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Hire me now</button>
                         </li>
                     </ul>
                 </div>
@@ -97,7 +125,7 @@
         <div class="container">
             <!--services title text-->
             <div id="serviceTitle">
-                <h2>Services I Provide</h2>
+                <h2>Services Provided</h2>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five
                     centuries
                 </p>
@@ -149,6 +177,53 @@
 
 
         </div>
+        <!-- <div class="chart" data-percent="73" data-scale-color="#ffb400">73%</div> -->
+
+    </section>
+
+    <!--Skills showcase section-->
+    <section id="skillsHome" class="skillsSection">
+        <div class="container">
+            <div class="row flexOnRow">
+                <div class="col-md-6">
+                    <img src="../portfolioShan/assets/images/new charles-deluvio-456792-unsplash.jpg">
+                </div>
+                <div class="col-md-6">
+                    <div class="skillCont" data-skill="HTML" value=1>
+                        <h5>HTML</h5>
+                    </div>
+                    <div class="skillCont" data-skill="CSS" value=.9>
+                        <h5>CSS</h5>
+                    </div>
+                    <div class="skillCont" data-skill="Javascript" value=0.75>
+                        <h5>Javascript</h5>
+                    </div>
+                    <div class="skillCont" data-skill="JQuery" value=0.7>
+                        <h5>JQuery</h5>
+                    </div>
+                    <div class="skillCont" data-skill="MongoDB" value=0.7>
+                        <h5>MongoDB</h5>
+                    </div>
+                    <div class="skillCont" data-skill="React.js" value=0.8>
+                        <h5>React.js</h5>
+                    </div>
+                    <div class="skillCont" data-skill="Express.js" value=0.7>
+                        <h5>Express.js</h5>
+                    </div>
+                    <div class="skillCont" data-skill="Node.js" value=0.8>
+                        <h5>Node.js</h5>
+                    </div>
+                    <div class="skillCont" data-skill="Firebase" value=0.7>
+                        <h5>Firebase</h5>
+                    </div>
+                    <div class="skillCont" data-skill="Firebase" value=0.7>
+                        <h5>Photoshop</h5>
+                    </div>
+                    <div class="skillCont" data-skill="Firebase" value=0.85>
+                        <h5>Lightroom</h5>
+                    </div>
+                </div>
+            </div>
     </section>
 
     <!--secion portfolio-->
@@ -162,7 +237,7 @@
             <div id="portfolioPages" class="filter-button-group">
                 <a href="" data-filter="*">All</a>
                 <a href="" data-filter=".website">Website</a>
-                <a href="" data-filter=".photo">Photo</a>
+                <a href="" data-filter=".photo">Photography</a>
             </div>
 
             <div class="portfolioTable">
@@ -233,7 +308,8 @@
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five
                     centuries
                 </p>
-                <a class="nav-link disabled hireBtn" href="#">Send a Message</a>
+                <!-- <a class="nav-link disabled hireBtn" href="#">Send a Message</a> -->
+                <button type="button" class="btn btn-primary hireBtn" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">SEND A MESSAGE</button>
             </div>
 
         </div>
@@ -300,6 +376,8 @@
     <script src="./assets/javascript/parallax.js-1.5.0/parallax.js"></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <!-- <script type="text/javascript" src="./assets/javascript/hoverdir/jquery.hoverdir.js"></script> -->
+    <script src="./assets/javascript/easypiechart/jquery.easypiechart.js"></script>
+    <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/1.0.0/dist/progressbar.js"></script>
     <script src="./assets/javascript/shan.js"></script>
 
 
